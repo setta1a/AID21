@@ -16,11 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app.views import api_get_vacansies, api_create_new_profile, api_get_profile
+from app.views import api_get_vacansies, api_create_new_profile, api_get_profile, mainpage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/parse_vacancies/<int:vac_id>', api_get_vacansies),
     path('api/create_profile', api_get_vacansies),
-    path('api/get_profile/<int:profile_id>', api_get_profile)
+    path('api/get_profile/<int:profile_id>', api_get_profile),
+    path('/', mainpage)
 ]
