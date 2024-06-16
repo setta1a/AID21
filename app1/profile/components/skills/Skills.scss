@@ -1,0 +1,16 @@
+.profile-edit-skills {
+    &__input-text {
+        display: flex;
+        gap: var(--g-spacing-2);
+    }
+
+    &__values {
+        display: flex;
+        gap: var(--g-spacing-2);
+        margin-bottom: var(--g-spacing-4);
+
+        &_empty {
+            margin-bottom: 0;
+        }
+    }
+}

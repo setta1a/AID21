@@ -1,0 +1,19 @@
+.vacancies-page {
+    gap: var(--g-spacing-6);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+
+    &__letter {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    &__vacancy {
+        &_inline {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    }
+}

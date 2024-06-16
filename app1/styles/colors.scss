@@ -1,0 +1,33 @@
+@mixin g-colors-private-color-light {
+    --g-color-private-color-50: rgba(226,29,36,0.1);
+    --g-color-private-color-100: rgba(226,29,36,0.15);
+    --g-color-private-color-150: rgba(226,29,36,0.2);
+    --g-color-private-color-200: rgba(226,29,36,0.3);
+    --g-color-private-color-250: rgba(226,29,36,0.4);
+    --g-color-private-color-300: rgba(226,29,36,0.5);
+    --g-color-private-color-350: rgba(226,29,36,0.6);
+    --g-color-private-color-400: rgba(226,29,36,0.7);
+    --g-color-private-color-450: rgba(226,29,36,0.8);
+    --g-color-private-color-500: rgba(226,29,36,0.9);
+
+    --g-color-private-color-50-solid: rgb(63,43,50);
+    --g-color-private-color-100-solid: rgb(72,42,49);
+    --g-color-private-color-150-solid: rgb(81,41,48);
+    --g-color-private-color-200-solid: rgb(99,40,47);
+    --g-color-private-color-250-solid: rgb(117,38,45);
+    --g-color-private-color-300-solid: rgb(136,37,44);
+    --g-color-private-color-350-solid: rgb(154,35,42);
+    --g-color-private-color-400-solid: rgb(172,34,41);
+    --g-color-private-color-450-solid: rgb(190,32,39);
+    --g-color-private-color-500-solid: rgb(208,31,38);
+    --g-color-private-color-550-solid: rgb(226,29,36);
+    --g-color-private-color-600-solid: rgb(229,52,58);
+    --g-color-private-color-650-solid: rgb(232,74,80);
+    --g-color-private-color-700-solid: rgb(235,97,102);
+    --g-color-private-color-750-solid: rgb(238,119,124);
+    --g-color-private-color-800-solid: rgb(241,142,146);
+    --g-color-private-color-850-solid: rgb(243,165,167);
+    --g-color-private-color-900-solid: rgb(246,187,189);
+    --g-color-private-color-950-solid: rgb(249,210,211);
+    --g-color-private-color-1000-solid: rgb(251,221,222);
+}

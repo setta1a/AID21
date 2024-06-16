@@ -1,0 +1,4 @@
+@mixin unlinkify($color) {
+    color: $color;
+    text-decoration: none;
+}

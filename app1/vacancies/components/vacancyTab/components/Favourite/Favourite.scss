@@ -1,0 +1,28 @@
+.favourite {
+    cursor: pointer;
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__image {
+        stroke: #000;
+        fill: none;
+
+        &_selected {
+            fill: #E21D24;
+        }
+
+        width: 30px;
+    }
+
+    &:hover &__image {
+        stroke: var(--g-color-text-secondary);
+
+        &_selected {
+            fill: var(--g-color-private-color-350);
+        }
+
+        fill: none;
+    }
+}

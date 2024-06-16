@@ -1,0 +1,97 @@
+@import '~@gravity-ui/uikit/styles/mixins.scss';
+@import '../../../styles/mixins.scss';
+
+.vacancy-tab {
+    background-color: var(--g-color-base-background);
+
+    width: 100%;
+    min-width: 320px;
+    display: flex;
+
+    padding: var(--g-spacing-4);
+    border: 2px solid rgba(198, 207, 216, 1);
+    border-radius: 10px;
+
+    justify-content: space-between;
+    align-items: center;
+
+    &:not(&_no-link) {
+        cursor: pointer;
+    }
+
+    &:hover:not(&_no-link) & {
+        border-color: rgb(172, 180, 187);
+    }
+
+    &:hover:not(&_no-link) &__title {
+        color: var(--Blue_light, rgba(57, 89, 255, 1));
+    }
+    
+    &__title {
+        @include text-subheader-3();
+        margin: 0 0 var(--g-spacing-3);
+    }
+
+    &__skills {
+        margin: 0 0 var(--g-spacing-5);
+        display: flex;
+        gap: var(--g-spacing-2);
+    }
+
+    &__properties {
+        display: flex;
+        flex-direction: column;
+
+        @include text-body-2();
+    }
+
+    &__salary, &__employment {
+        margin-bottom: var(--g-spacing-2);
+    }
+
+    &__actions {
+        align-self: stretch;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        &_block {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &_block {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: var(--g-spacing-6);
+    }
+
+    &__confirm-action {
+        --g-color-text-brand-contrast: var(--g-color-text-light-primary);
+        --g-color-base-brand: var(--g-color-private-color-550-solid);
+        --g-color-base-brand-hover: var(--g-color-private-color-400);
+
+        .g-button__text {
+            @include text-body-2();
+            margin: auto;
+        }
+
+        &_confirmed {
+            --g-button-background-color: var(--g-color-base-background);
+            --g-button-border-width: 1px;
+            --g-button-border-color: var(--g-color-base-brand);
+            .g-button__text {
+                color: var(--g-color-base-brand);
+            }
+
+            &:hover {
+                .g-button__text {
+                    color: var(--g-color-base-background);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@import '~@gravity-ui/uikit/styles/mixins.scss';
+
+.accompanying-letter-edit {
+    border-radius: 10px;
+    padding: var(--g-spacing-4);
+    background-color: var(--g-color-base-background);
+
+    h2 {
+        @include text-subheader-3();
+        margin: 0 0 var(--g-spacing-3);
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: var(--g-spacing-3);
+    }
+
+    &__url {
+        display: flex;
+        align-items: center;
+
+        h3 {
+            min-width: 180px;
+        }
+    }
+}

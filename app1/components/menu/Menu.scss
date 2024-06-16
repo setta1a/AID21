@@ -1,0 +1,31 @@
+@import "~@gravity-ui/uikit/styles/mixins.scss";
+@import "~@gravity-ui/uikit/styles/styles.scss";
+@import "../../styles/mixins.scss";
+
+.menu {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    &__navigation {
+        display: flex;
+        gap: var(--g-spacing-10);
+    }
+
+    &__link {
+        @include text-header-2();
+        @include unlinkify(#000);
+
+        &:hover:not(&_current) {
+            text-decoration: underline;
+            color: var(--g-color-private-color-550-solid);
+        }
+
+        &_current {
+            color: var(--g-color-private-color-550-solid);
+            cursor: default;
+        }
+    }
+}
