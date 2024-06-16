@@ -4,6 +4,9 @@ from django.http import JsonResponse
 from django.shortcuts import render, redirect
 import requests
 import json
+
+from django.views.decorators.csrf import csrf_exempt
+
 from app.models import User
 
 
@@ -69,3 +72,43 @@ def api_create_new_profile(request):
 def api_get_profile(request, profile_id):
     context = {}
     user = User.objects.get(id=profile_id)
+
+
+@csrf_exempt
+def create_user(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+
+        essentials = data.get('essentials', {})
+        name = essentials.get('name')
+        surname = essentials.get('surname')
+        middle_name = essentials.get('middleName')
+        birth_date = essentials.get('birthDate')
+        gender = essentials.get('gender')
+        citizenship = essentials.get('citizenship')
+        region = essentials.get('region')
+        mobile = essentials.get('mobile')
+        email = essentials.get('email')
+        contacts_telegram = essentials.get('contacts', {}).get('TELEGRAM')
+        contacts_vk = essentials.get('contacts', {}).get('VK')
+        about = essentials.get('about')
+        avatar = essentials.get('avatar')
+
+        user = User.objects.create(
+            name=name,
+            surname=surname,
+            middleName=middle_name,
+            birthDate=birth_date,
+            gender=gender,
+            citizenship=citizenship,
+            region=region,
+            mobile=mobile,
+            email=email,
+            contacts=f'Telegram: {contacts_telegram}, VK: {contacts_vk}',
+            about=about,
+            avatar=avatar
+        )
+
+        return JsonResponse({'message': 'User created successfully'}, status=201)
+
+    return JsonResponse({'error': 'Invalid request method'}, status=405)
