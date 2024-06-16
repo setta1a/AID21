@@ -1,6 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render, redirect
 import requests
 import json
@@ -8,6 +8,10 @@ import json
 from django.views.decorators.csrf import csrf_exempt
 
 from app.models import User
+
+
+def mainpage(request):
+    return HttpResponse('Hello world')
 
 
 def get_vacancies():
