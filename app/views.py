@@ -112,3 +112,16 @@ def create_user(request):
         return JsonResponse({'message': 'User created successfully'}, status=201)
 
     return JsonResponse({'error': 'Invalid request method'}, status=405)
+
+
+async def api_score_resume(request, vac_id, resume_id):
+    # with open('./ml/config/config_ml.json', 'r') as f_in:
+    #     config = json.load(f_in)
+
+    # review_generator = ReviewGenerator(**config)
+    # resume = ...
+    # vacancy = ...
+    # ans = await review_generator.generate_review(resume=resume, vacancy=vacancy)
+    # return {'score': ans[0], 'review_text': ans[1]}
+
+    return {'score': 90, 'review_text': 'Amazing candidate!'}
